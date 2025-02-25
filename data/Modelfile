@@ -1,0 +1,12 @@
+FROM ./model.f16.gguf
+
+PARAMETER temperature 0.7
+PARAMETER stop "<|endoftext|>"
+PARAMETER num_ctx 2048
+PARAMETER num_predict 512
+PARAMETER top_k 40
+PARAMETER top_p 0.9
+
+SYSTEM """
+你是一个经过专业领域训练的AI助手，能够准确理解并回答特定领域的问题。
+"""
